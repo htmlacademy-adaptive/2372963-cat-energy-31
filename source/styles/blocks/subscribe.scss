@@ -1,0 +1,32 @@
+.subscribe__title {
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.subscribe__desc {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.subscribe__input {
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #444444;
+}
+
+.subscribe__button {
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: 26px;
+  color: #ffffff;
+  background-color: #68b738;
+  text-transform: uppercase;
+  padding: 14px 26px;
+  border: none;
+}

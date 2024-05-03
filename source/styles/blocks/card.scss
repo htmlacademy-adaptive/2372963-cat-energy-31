@@ -1,0 +1,47 @@
+.card__title {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.card__specific {
+  font-family: $primary-font;
+  font-size: 12px;
+  line-height: 16px;
+  color: #444444;
+}
+
+.card__value {
+  font-family: $primary-font;
+  font-size: 12px;
+  line-height: 16px;
+  color: #444444;
+}
+
+.card__button {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #68b738;
+  padding: 10px 109px;
+}
+
+.card__title--more {
+  color: #111111;
+}
+
+.card__desc {
+  font-family: $primary-font;
+  font-size: 12px;
+  line-height: 16px;
+  color: #444444;
+}
+
+.card__button--more {
+  color: #444444;
+  background-color: #f2f2f2;
+}
