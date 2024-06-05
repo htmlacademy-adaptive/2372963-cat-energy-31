@@ -1,7 +1,86 @@
+
+.promo {
+  background-color: #68b738;
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/promo/promo@2x.jpg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 187px;
+  padding-bottom: 43px;
+}
+
+.promo::before {
+  content: "";
+  background-image: url("../../icons/stack.svg#icon-gift");
+  background-repeat: no-repeat;
+  background-size: 80px 80px;
+  position: absolute;
+  display: block;
+  top: 59px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+}
+
+
 .promo__desc {
   font-family: $primary-font;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
-  background-color: rgba(104, 183, 56, 0.85);
+  margin: -1px 1px 0 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+
+@media (min-width: $tablet-width) {
+  .promo {
+    flex-direction: row;
+    justify-content: end;
+    padding: 71px 125px 69px 77px;
+    background-position-y: 60%;
+    margin-left: 0;
+    margin-right: 0;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/promo/promo-tab@2x.jpg");
+  }
+
+  .promo::before {
+    width: 80;
+    height: 82px;
+    top: 58px;
+    left: 118px;
+  }
+
+  .promo__desc {
+    max-width: 161px;
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo {
+    align-self: flex-start;
+    justify-content: unset;
+    flex-direction: column;
+    padding: 185px 42px 42px;
+    margin: 0;
+    background-position-x: 100%;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/promo/promo@2x.jpg");
+  }
+
+  .promo::before {
+    left: 50%;
+  }
+
+  .promo__desc {
+    text-align: center;
+    width: 161px;
+  }
+
 }

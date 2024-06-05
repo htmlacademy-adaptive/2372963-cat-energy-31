@@ -3,23 +3,35 @@
 @import "./common/mixins.scss";
 @import "./common/fonts.scss";
 @import "./common/global.scss";
+@import "./common/list-reset.scss";
+@import "./common/visually-hidden.scss";
+@import "./common/button.scss";
+
 
 /* BLOCKS */
 @import "./blocks/page.scss";
 @import "./blocks/header.scss";
 @import "./blocks/navigation.scss";
-@import "./blocks/main.scss";
 @import "./blocks/hero.scss";
 @import "./blocks/program.scss";
 @import "./blocks/advantages.scss";
 @import "./blocks/result.scss";
+
+@import "./blocks/stats.scss";
 @import "./blocks/contacts.scss";
 @import "./blocks/footer.scss";
-@import "./blocks/catalog.scss";
+
 @import "./blocks/products.scss";
 @import "./blocks/product-add.scss";
 @import "./blocks/promo.scss";
 @import "./blocks/subscribe.scss";
 @import "./blocks/card.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/copyright.scss";
+
+// general
+
+
 // styles.scss
 
