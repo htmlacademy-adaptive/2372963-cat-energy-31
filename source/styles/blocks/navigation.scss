@@ -1,0 +1,136 @@
+
+.navigation__list {
+  width: 320px;
+  flex-direction: column;
+  display: none;
+}
+
+.navigation__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #e6e6e6;
+}
+
+.navigation__link {
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: 20px;
+  color: $basic-black;
+  text-transform: uppercase;
+  padding: 22px 10px 24px;
+}
+
+.navigation__link:hover {
+  opacity: 0.6;
+}
+
+.navigation__link:active {
+  opacity: 0.3;
+}
+
+
+// @media (max-width: $mobile-width-only) {
+//   .navigation--closed .navigation__list {
+//     display: none;
+//   }
+
+//   .navigation--opened .navigation__list {
+//     position: absolute;
+//     top: 64px;
+//     left: 0;
+//     z-index: 10;
+//     min-width: 100%;
+//     display: block;
+//   }
+
+//   .navigation--nojs .navigation__list {
+//     display: flex;
+//     width: 320px;
+//     flex-direction: column;
+//   }
+// }
+
+// tablet
+
+@media (min-width: $tablet-width) {
+  .navigation {
+    display: flex;
+    margin: 0;
+    margin-right: 6px;
+  }
+
+  .navigation__list {
+    display: flex;
+    flex-flow: row;
+    gap: 33px;
+    width: 100%;
+    max-width: 465px;
+  }
+
+  .navigation__item {
+    border-top: none;
+    width: none;
+  }
+
+  .navigation__link {
+    font-size: 18px;
+    line-height: 24px;
+    position: relative;
+    padding: 14px 0 12px;
+  }
+
+  .navigation__link--current::after {
+    content: "";
+    background-color: #68b738;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .navigation {
+    margin-right: 0;
+  }
+
+  .navigation__list {
+    display: flex;
+    max-width: 600px;
+    gap: 36px;
+  }
+
+  .navigation__item {
+    padding-top: 2px;
+  }
+
+  .navigation__link {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: $basic-white;
+    margin-right: -1px;
+  }
+
+  .navigation__link--catalog {
+    color: #111111;
+  }
+
+  .navigation__link--current::after {
+    content: "";
+    background-color: $basic-white;
+    height: 2px;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    right: 0;
+  }
+
+  .navigation__link--catalog.navigation__link--current::after {
+    background-color: $basic-green;
+  }
+
+}

@@ -1,0 +1,133 @@
+
+.contacts {
+  position: relative;
+  padding-top: 40px;
+}
+
+.contacts__wrapper {
+  justify-content: space-between;
+  width: 280px;
+  padding: 28px 20px 26px;
+  display: flex;
+}
+
+.contacts__text {
+
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: #111111;
+  text-transform: uppercase;
+
+  margin: 0;
+  max-width: 140px;
+
+}
+
+.contacts__adress {
+  font-family: $primary-font;
+  line-height: 20px;
+  color: #444444;
+
+  font-style: normal;
+  max-width: 140px;
+
+}
+
+.contacts__city {
+  font-family: $primary-font;
+  line-height: 20px;
+  color: #444444;
+}
+
+
+.contacts iframe {
+  display: block;
+  border: none;
+  width: 100%;
+}
+
+.contacts__map {
+  position: relative;
+}
+
+.contacts__map::after {
+  content: "";
+  background-image: url("../../icons/stack.svg#pin");
+  background-repeat: no-repeat;
+  background-size: 56px 52px;
+  position: absolute;
+  width: 56px;
+  height: 52px;
+  top: 140px;
+  left: 135px;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    padding-top: 0;
+    margin-top: 80px;
+  }
+
+  .contacts__wrapper {
+    width: 628px;
+    padding: 60px 70px;
+  }
+
+  .contacts__text {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+    min-width: 163px;
+  }
+
+  .contacts__adress {
+    max-width: 157px;
+    font-size: 16px;
+    display: flex;
+    text-align: end;
+    flex-direction: column;
+  }
+
+  .contacts__city {
+    margin-top: 19px;
+  }
+
+  .contacts iframe {
+    height: 400px;
+  }
+
+  .contacts__map::after {
+    background-size: 113px 106px;
+    width: 113px;
+    height: 106px;
+    left: 334px;
+    top: 146px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    margin-top: 0;
+  }
+
+  .contacts__map::after {
+    left: 908px;
+    top: 132px;
+  }
+
+  .contacts__wrapper {
+    background-color: #ffffff;
+    width: 407px;
+    padding: 61px 75px 61px 80px;
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    z-index: 1;
+  }
+
+  .contacts__adress {
+    text-align: start;
+  }
+}
+

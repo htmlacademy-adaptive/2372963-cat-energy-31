@@ -1,0 +1,41 @@
+.copyright {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 40px;
+}
+
+.copyright__text {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $basic-text-gray;
+}
+
+.copyright::after {
+  content: "";
+  mask-image: url("../../icons/stack.svg#logo-html");
+  mask-size: 27px 34px;
+  mask-repeat: no-repeat;
+  background-color: #666666;
+  width: 27px;
+  height: 34px;
+  display: block;
+}
+
+.copyright:hover::after {
+  background-color: $basic-green;
+}
+
+.copyright:active {
+  opacity: 0.3;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    margin: 0;
+    gap: 23px;
+  }
+}
