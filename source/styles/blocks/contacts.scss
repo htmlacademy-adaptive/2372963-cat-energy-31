@@ -1,37 +1,38 @@
 
-.contacts {
+.contacts__container {
   position: relative;
-  padding-top: 40px;
 }
 
 .contacts__wrapper {
   justify-content: space-between;
   width: 280px;
-  padding: 28px 20px 26px;
+  padding: 26px 20px;
   display: flex;
+  margin: 0 auto;
+  background-color: $basic-white;
+}
+
+.contacts__wrapper--catalog {
+  margin-top: 40px;
+  background-color: #f2f2f2;
 }
 
 .contacts__text {
-
   font-family: $secondary-font;
   font-size: 16px;
   line-height: 20px;
   color: #111111;
   text-transform: uppercase;
-
   margin: 0;
   max-width: 140px;
-
 }
 
 .contacts__adress {
   font-family: $primary-font;
   line-height: 20px;
   color: #444444;
-
   font-style: normal;
   max-width: 140px;
-
 }
 
 .contacts__city {
@@ -49,6 +50,20 @@
 
 .contacts__map {
   position: relative;
+  width: 100%;
+  height: 362px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.contacts__img {
+  display: block;
+  width: 100%;
+  height: 362px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .contacts__map::after {
@@ -66,12 +81,15 @@
 @media (min-width: $tablet-width) {
   .contacts {
     padding-top: 0;
-    margin-top: 80px;
   }
 
   .contacts__wrapper {
     width: 628px;
-    padding: 60px 70px;
+    padding: 62px 70px 60px;
+  }
+
+  .contacts__wrapper--catalog {
+    margin-top: 80px;
   }
 
   .contacts__text {
@@ -93,6 +111,10 @@
     margin-top: 19px;
   }
 
+  .contacts__map {
+    height: 400px;
+  }
+
   .contacts iframe {
     height: 400px;
   }
@@ -104,11 +126,17 @@
     left: 334px;
     top: 146px;
   }
+
+  .contacts__img {
+    width: 768px;
+    height: 400px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .contacts {
     margin-top: 0;
+    width: 100%;
   }
 
   .contacts__map::after {
@@ -119,15 +147,24 @@
   .contacts__wrapper {
     background-color: #ffffff;
     width: 407px;
-    padding: 61px 75px 61px 80px;
+    padding: 60px 78px 61px 80px;
     position: absolute;
     top: 95px;
     left: 110px;
     z-index: 1;
   }
 
+  .contacts__wrapper--catalog {
+    padding-top: 62px;
+    margin-top: 0;
+  }
+
   .contacts__adress {
     text-align: start;
   }
-}
 
+  .contacts__img {
+    width: 1440px;
+    height: 400px;
+  }
+}

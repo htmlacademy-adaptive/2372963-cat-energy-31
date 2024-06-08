@@ -1,8 +1,8 @@
+
 .subscribe__title {
   font-family: $secondary-font;
   font-size: 24px;
   line-height: 24px;
-
   font-weight: 400;
   color: #000000;
   margin-top: 39px;
@@ -24,38 +24,42 @@
   z-index: -1;
 }
 
-
-.subscribe__form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
 .subscribe__desc {
   font-family: $secondary-font;
   font-size: 16px;
   line-height: 24px;
   color: #000000;
-
   text-align: center;
   margin-top: 14px;
   margin-bottom: 22px;
 }
 
+.subscribe__form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+.subscribe__label {
+  width: 100%;
+}
+
 .subscribe__input {
   color: #444444;
   text-transform: uppercase;
-  background-position: right 12px center;
+  // background-position: right center;
   background-repeat: no-repeat;
-  background-size: 20px 20px;
+  // background-size: 20px 20px;
   border: 1px solid #e7e7e7;
-  padding: 12px 13px;
-  font-family: "Oswald", sans-serif, "Arial";
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: normal;
   transition: all 0.3s ease-in-out;
-  width: 254px;
+  width: 100%;
+  padding: 12px 13px;
+  box-sizing: border-box;
 }
 
 .subscribe__input:hover {
@@ -63,14 +67,17 @@
 }
 
 .subscribe__input:focus {
-  border: none;
   outline: 2px solid #444444;
+}
+
+.subscribe__input:disabled {
+  outline: 2px solid #ff8282;
 }
 
 .subscribe__button {
   color: #ffffff;
   background-color: #68b738;
-  width: 280px;
+  width: 100%;
   font-size: 20px;
   line-height: 26px;
   padding: 14px 26px;
@@ -112,8 +119,11 @@
   }
 
   .subscribe__input {
-    width: 347px;
     padding-left: 11px;
+  }
+
+  .subscribe__button {
+    width: 390px;
   }
 }
 
@@ -139,8 +149,7 @@
     top: 17px;
   }
 
-  .subscribe__input {
-    width: 470px;
+  .subscribe__button {
+    width: 364px;
   }
-
 }
