@@ -1,0 +1,148 @@
+.slider {
+  display: flex;
+  position: relative;
+  margin-top: 20px;
+  justify-content: center;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider__img {
+  object-fit: cover;
+  object-position: left;
+  height: 100%;
+  display: block;
+}
+
+.slider__img--before {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.slider__img--after {
+  clip-path: inset(0 0 0 50%);
+}
+
+.slider__button {
+  cursor: pointer;
+  background-color: #666666;
+  border: none;
+  width: 4px;
+  height: 256px;
+  padding: 0;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  left: 49%;
+}
+
+.slider__button::before {
+  content: "";
+  background-color: #ffffff;
+  background-size: 38px 38px;
+  border: 2px solid #666666;
+  border-radius: 50%;
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  top: 106px;
+  left: -20px;
+}
+
+.slider__button::after {
+  content: "";
+  background-color: #666666;
+  width: 24px;
+  height: 18px;
+  position: absolute;
+  top: 119px;
+  left: -10px;
+  mask-image: url("../../icons/icon-slider.svg");
+  mask-size: 24px 18px;
+  mask-repeat: no-repeat;
+}
+
+.slider__button:hover {
+  background-color: $basic-green;
+}
+
+.slider__button:hover::before {
+  border-color: $basic-green;
+}
+
+.slider__button:hover::after {
+  background-color: $basic-green;
+}
+
+.slider__button:active {
+  background-color: #5eaa2f;
+}
+
+.slider__button:active::before {
+  border-color: #5eaa2f;
+}
+
+.slider__button:active::after {
+  background-color: #5eaa2f;
+}
+
+@media (min-width: $tablet-width) {
+  .slider {
+    width: 560px;
+    margin: 2px auto;
+  }
+
+  .slider__button {
+    height: 512px;
+    left: 50%;
+    top: 2px;
+  }
+
+  .slider__button::before {
+    top: 236px;
+  }
+
+  .slider__button::after {
+    top: 249px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider {
+    margin: 0;
+    padding-top: 24px;
+  }
+
+  .slider__button {
+    top: 24px;
+    left: 50%;
+  }
+
+  .slider__button::before {
+    top: 235px;
+  }
+
+  .slider__button::after {
+    top: 247px;
+  }
+
+  .slider__img {
+    height: 510px;
+  }
+
+  .slider__img--before {
+    width: 50%;
+    position: absolute;
+    top: 24px;
+    left: 0;
+    overflow: hidden;
+  }
+
+  .slider__img--after {
+    clip-path: inset(0 0 0 50%);
+  }
+}
