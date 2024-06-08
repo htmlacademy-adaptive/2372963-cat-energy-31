@@ -38,11 +38,9 @@
   line-height: 20px;
   color: #222222;
   text-transform: uppercase;
-
   max-width: 76px;
   font-weight: 400;
   margin-top: 2px;
-
 }
 
 .card__specific {
@@ -50,10 +48,8 @@
   font-size: 12px;
   line-height: 16px;
   color: #444444;
-
   margin: 0;
   text-transform: capitalize;
-
 }
 
 .card__value {
@@ -65,7 +61,6 @@
   color: #444444;
   margin: 0;
   text-transform: capitalize;
-
 }
 
 .card__button {
@@ -85,7 +80,7 @@
   color: rgba(255, 255, 255, 0.3);
 }
 
-.card--more {
+.card-more {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -97,7 +92,7 @@
   padding-bottom: 22px;
 }
 
-.card--more-title {
+.card-more__title {
   color: #111111;
   font-family: $secondary-font;
   text-transform: uppercase;
@@ -108,7 +103,7 @@
   margin-top: 59px;
 }
 
-.card--more-desc {
+.card-more__desc {
   font-family: $primary-font;
   font-size: 12px;
   line-height: 16px;
@@ -118,17 +113,17 @@
   margin-top: -9px;
 }
 
-.card--more-button {
+.card-more__button {
   background-color: #f2f2f2;
   width: 240px;
   color: $basic-text-gray;
 }
 
-.card--more-button:hover {
+.card-more__button:hover {
   background-color: #ebebeb;
 }
 
-.card--more-button:active {
+.card-more__button:active {
   background-color: #ebebeb;
 }
 
@@ -199,19 +194,20 @@
     line-height: 20px;
   }
 
-  .card--more {
+  .card-more {
     padding-bottom: 40px;
     background-size: 60px 60px;
     background-position: 50% 133px;
   }
 
-  .card--more::after {
+  .card-more::after {
     background-color: $basic-white;
     border: 2px solid #f2f2f2;
     height: 425px;
   }
 
-  .card--more-title {
+
+  .card-more__title {
     font-size: 20px;
     line-height: 24px;
     font-weight: 400;
@@ -221,7 +217,8 @@
     text-align: center;
   }
 
-  .card--more-desc {
+
+  .card-more__desc {
     font-size: 16px;
     line-height: 18px;
     font-weight: 400;
@@ -230,7 +227,8 @@
     margin: 23 auto 82px;
   }
 
-  .card--more-button {
+
+  .card-more__button {
     width: 212px;
   }
 }
@@ -262,28 +260,27 @@
     padding-bottom: 12px;
   }
 
-  .card--more {
+  .card-more {
     border: none;
     background-position-y: 29%;
   }
 
-  .card--more::after {
+  .card-more::after {
     background-color: $basic-white;
     border: 2px solid #f2f2f2;
     height: 429px;
   }
 
-  .card--more-title {
+  .card-more__title {
     padding-top: 219px;
   }
 
-  .card--more-desc {
+  .card-more__desc {
     margin-top: 24px;
     margin-bottom: 92px;
   }
 
-  .card--more-button {
+  .card-more__button {
     width: 129px;
   }
-
 }

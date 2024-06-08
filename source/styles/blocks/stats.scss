@@ -1,4 +1,5 @@
-.stats__list {
+
+.stats {
   display: grid;
   gap: 32px;
   grid-template-columns: repeat(2, 124px);
@@ -39,7 +40,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .stats__list {
+  .stats {
     grid-template-columns: repeat(2, 162px);
     gap: 42px;
   }

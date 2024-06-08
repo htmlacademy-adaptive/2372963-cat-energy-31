@@ -1,9 +1,11 @@
 .header {
-
   border-bottom: 1px solid #d9d9d9;
   align-items: center;
   display: flex;
+  flex-direction: column;
   position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .header__wrapper {
@@ -29,19 +31,51 @@
   display: block;
 }
 
-.header__toggle--close {
-  background-image: url("../../icons/stack.svg#navigation_close-menu-mob");
-}
-
 .header__toggle {
-  background-color: #ffffff;
-  background-image: url("../../icons/stack.svg#navigation_menu-burger-mob");
-  background-repeat: no-repeat;
-  background-size: 24px 24px;
-  border: none;
+  position: relative;
   width: 24px;
   height: 24px;
   padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.header:has(nav.navigation--nojs) .header__toggle {
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 2px;
+    background-color: $basic-black;
+    content: "";
+  }
+
+  &::before {
+    top: 50%;
+    transform: translate(-50%, 0) rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    top: 50%;
+    transform: translate(-50%, 0) rotate(-45deg);
+  }
+}
+
+.header:has(.navigation--closed) .header__toggle::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 2px;
+  background-color: $basic-black;
+  box-shadow: 0 8px 0 0 $basic-black, 0 -8px 0 0 $basic-black;
+  content: "";
 }
 
 .header:has(.navigation--opened) .header__toggle--close {
@@ -74,8 +108,7 @@
     flex-flow: row wrap;
     justify-content: space-between;
     border: none;
-    padding-top: 11px;
-    padding-bottom: 14px;
+    padding: 11px 30px 14px;
   }
 
   .header__wrapper {
@@ -109,6 +142,10 @@
   .header__toggle--close {
     display: none;
   }
+
+  .header:has(nav.navigation--nojs) .header__toggle {
+    display: none;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -117,9 +154,12 @@
     padding-bottom: 0;
   }
 
+  .header__wrapper {
+    width: 1220px;
+  }
+
   .header__text {
     width: 118px;
     height: 21px;
   }
-
 }
