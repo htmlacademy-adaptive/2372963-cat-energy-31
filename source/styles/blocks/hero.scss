@@ -1,5 +1,4 @@
 .hero {
-  position: relative;
   width: 100%;
 }
 
@@ -116,21 +115,22 @@
 
 @media (min-width: $desktop-width) {
   .hero::before {
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/hero/cat-background@1x.jpg");
-    background-position: 0;
-    background-size: cover;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/hero/cat-background-desktop@1x.png");
+
+    background-size: contain;
     min-width: 50%;
-    height: 707px;
+    min-height: 694px;
     display: block;
-    top: -140px;
+    top: 0;
     right: 0;
     z-index: -1;
   }
 
   .hero__wrapper {
-    min-height: 550px;
+    min-height: 549px;
     padding-top: 99px;
     max-width: 1220px;
+    margin-bottom: 1px;
   }
 
   .hero__title {
@@ -159,6 +159,6 @@
 
 @media (min-resolution: 2dppx) {
   .hero::before {
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/hero/cat-background@2x.jpg");
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/hero/cat-background-desktop@2x.png");
   }
 }
