@@ -6,13 +6,19 @@
   z-index: -1;
   content: "";
   background-color: #68b738;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/hero/cat-background@1x.jpg");
-  background-position: 50% 0;
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/hero/index-background-mob@1x.jpg"), linear-gradient(#414045, #535459);
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: 50% 0;
   min-width: 100%;
   min-height: 302px;
   position: absolute;
+}
+
+@media (min-resolution: 2dppx) {
+  .hero::before {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/hero/index-background-mob@2x.jpg"), linear-gradient(#414045, #535459);
+  }
 }
 
 .hero__wrapper {
@@ -62,9 +68,6 @@
   background-color: #5eaa2f;
 }
 
-
-// tablet
-
 @media (min-width: $tablet-width) {
   .hero::before {
     display: none;
@@ -82,16 +85,19 @@
     font-size: 60px;
     line-height: 60px;
     max-width: 440px;
-    margin: 0 auto 42px 90px;
+    margin: 0 auto 40px 90px;
     text-align: left;
   }
 
   .hero__slogan {
     color: $basic-black;
     font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
     margin: 0;
     margin-left: 90px;
     margin-bottom: 21px;
+    max-width: 283px;
   }
 
   .hero__img {
@@ -109,13 +115,13 @@
     text-align: center;
     margin-left: 90px;
     position: absolute;
-    bottom: 526px;
+    bottom: 528px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .hero::before {
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/hero/cat-background-desktop@1x.png");
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/hero/index-background-desk@2x.jpg");
     background-position-x: left;
     background-size: 100%, auto 694px;
     min-width: 50%;
@@ -126,6 +132,12 @@
     z-index: -1;
   }
 
+  @media (min-resolution: 2dppx) {
+    .hero::before {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/hero/index-background-desk@2x.jpg");
+    }
+  }
+
   .hero__wrapper {
     min-height: 549px;
     padding-top: 99px;
@@ -134,14 +146,13 @@
   }
 
   .hero__title {
-    margin: 0 0 42px 80px;
+    margin: 0 0 40px 80px;
     z-index: 1;
   }
 
   .hero__slogan {
-    margin-bottom: 54px;
+    margin-bottom: 52px;
     margin-left: 80px;
-    z-index: 1;
   }
 
   .hero__img {
@@ -154,11 +165,5 @@
   .hero__button {
     margin-left: 80px;
     position: initial;
-  }
-}
-
-@media (min-resolution: 2dppx) {
-  .hero::before {
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/hero/cat-background-desktop@2x.png");
   }
 }
