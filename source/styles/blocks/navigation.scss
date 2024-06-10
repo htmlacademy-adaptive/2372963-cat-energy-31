@@ -53,22 +53,18 @@
   }
 }
 
-// tablet
-
 @media (min-width: $tablet-width) {
   .navigation {
     display: flex;
-    margin: 0;
-    position: absolute;
-    right: 36px;
+    margin: 0 5px 0 0;
   }
 
   .navigation__list {
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
-    gap: 33px;
-    width: 100%;
+    column-gap: 33px;
+    max-width: 436px;
   }
 
   .navigation__item {
@@ -96,12 +92,11 @@
 @media (min-width: $desktop-width) {
   .navigation {
     margin-right: 0;
-    right: 30px;
-    max-width: 480px;
   }
 
   .navigation__list {
-    gap: 36px;
+    column-gap: 36px;
+    max-width: 480px;
   }
 
   .navigation__item {

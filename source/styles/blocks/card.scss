@@ -169,6 +169,7 @@
     max-width: 135px;
     text-align: center;
     margin: 23px auto 0;
+    word-break: break-all;
   }
 
   .card__characteristic {
@@ -206,7 +207,6 @@
     height: 425px;
   }
 
-
   .card-more__title {
     font-size: 20px;
     line-height: 24px;
@@ -227,7 +227,6 @@
     margin: 23 auto 82px;
   }
 
-
   .card-more__button {
     width: 212px;
   }
@@ -235,29 +234,39 @@
 
 @media (min-width: $desktop-width) {
   .card__title {
-    margin-top: 12px;
+    margin-top: 14px;
   }
 
   .card__info {
-    padding-bottom: 34px;
+    padding-bottom: 33px;
   }
 
   .card__characteristic {
     width: 169px;
     margin-top: 0;
-    padding-top: 23px;
-    grid-template-rows: 25px 26px 24px;
-    gap: 10px;
+    padding-top: 22px;
+    gap: 3px;
   }
 
   .card__features {
-    padding-top: 4px;
+    padding-top: 1px;
+    padding-bottom: 5px;
+    max-width: 169px;
+  }
+
+  .card__features--pd {
     padding-bottom: 8px;
   }
 
-  .card__features-pd {
-    padding-top: 0;
-    padding-bottom: 12px;
+  .card__specific {
+    max-width: 50%;
+    word-break: break-all;
+  }
+
+  .card__value {
+    width: 50%;
+    text-align: end;
+    word-break: break-all;
   }
 
   .card-more {

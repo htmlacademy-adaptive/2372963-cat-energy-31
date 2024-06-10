@@ -3,10 +3,15 @@
   position: relative;
 }
 
+.contacts__container--catalog {
+  background-color: #f2f2f2;
+}
+
 .contacts__wrapper {
   justify-content: space-between;
   width: 280px;
-  padding: 26px 20px;
+  padding-top: 26px;
+  padding-bottom: 26px;
   display: flex;
   margin: 0 auto;
   background-color: $basic-white;
@@ -85,7 +90,8 @@
 
   .contacts__wrapper {
     width: 628px;
-    padding: 62px 70px 60px;
+    padding-top: 62px;
+    padding-bottom: 60px;
   }
 
   .contacts__wrapper--catalog {

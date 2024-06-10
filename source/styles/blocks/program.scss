@@ -117,16 +117,16 @@
 
   .program__item {
     flex-flow: column wrap;
-    padding: 77px 316px 57px 52px;
+    padding: 76px 316px 57px 52px;
   }
 
   .program__item--slim::before {
-
     background-size: 200px 211px;
     width: 200px;
     height: 211px;
     right: 63px;
-    top: 78px;
+    left: auto;
+    top: 75px;
   }
 
   .program__item--pro::before {
@@ -134,7 +134,8 @@
     width: 268px;
     height: 200px;
     top: 90px;
-    left: 413px;
+    right: 27px;
+    left: auto;
   }
 
   .program__title {
